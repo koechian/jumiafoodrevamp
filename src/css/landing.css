@@ -1,0 +1,24 @@
+*{
+    box-sizing: border-box;
+}
+section{
+    max-height: 100vh;
+    outline: red dotted 2px;
+}
+.icon{
+display: none;
+}
+header{
+   display: flex;
+   flex-direction: row; 
+   margin-top: 20px;
+}
+#left-elements{
+    display: flex;
+    flex-direction: row;
+}
+#searchbar{
+    outline: red solid 2px;
+    width: 300px;
+    height: 30px;
+}

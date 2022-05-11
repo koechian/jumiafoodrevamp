@@ -5,26 +5,67 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jumia Food | Home</title>
+    <link rel="stylesheet" href="css/landing.css" />
   </head>
   <body>
     <section>
       <header>
         <div id="left-elements">
-          <div class="logo"></div>
+          <div class="logo">
+            <img class="" src="/assets/jumiafood-logo.svg" />
+          </div>
           <div class="location">
-            <div class="icon" id="location "></div>
-            <div><span>Strathmore University - Nairobi</span></div>
+            <img class="icon" src="/assets/maps-and-flags.svg" alt="" />
+            <span>Strathmore University - Nairobi</span>
           </div>
         </div>
         <div id="searchbar">
-          <div class="icon" id="search"></div>
+          <div id="search">
+            <img class="icon" src="/assets/search.svg" />
+          </div>
           <div><span>Search</span></div>
         </div>
         <div id="right-elements">
-          <div></div>
-          <div id="cart"></div>
+          <div>
+            <a href="">Profile</a>
+            <a href="">My Orders</a>
+            <a href="">Past Orders</a>
+          </div>
+          <div class="icon" id="cart">
+            <img src="/assets/shopping-cart.svg" alt="" srcset="" />
+          </div>
         </div>
       </header>
+      <main>
+        <div class="category-rows">
+          <div><img src="/assets/deals.png" alt="" /></div>
+          <div><img src="/assets/water.png" alt="" /></div>
+          <div><img src="/assets/alcohol.png" alt="" /></div>
+          <div><img src="/assets/shopping.png" alt="" /></div>
+        </div>
+        <div class="cards-row">
+          <div id="cards-row-text">
+            <div>
+              <span>What</span>
+              <span>would you like</span>
+              <span>to&nbsp;<span>order</span>&nbsp; today?</span>
+            </div>
+            <div id="cards-row-buttons">
+              <span class="span-button">Explore Categories</span>
+              <span class="span-buttons">Same as last time</span>
+            </div>
+          </div>
+          <div id="cards-row-cards">
+            <div class="cards"></div>
+            <div class="cards"></div>
+          </div>
+        </div>
+      </main>
+      <footer>
+        <div class="scroll-prompt">
+          <img class="icon" src="/assets/scroll-down.svg" />
+        </div>
+      </footer>
     </section>
   </body>
 </html>
