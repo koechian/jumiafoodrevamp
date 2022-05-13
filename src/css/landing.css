@@ -305,22 +305,28 @@ a:hover {
 #main-2-text {
   padding: 10%;
 }
-#header-text p {
+.header-text p {
   font-size: 60px;
   color: #ff9900;
   line-height: 110%;
 }
-#subtext {
+.subtext {
   margin-top: 10%;
 }
-#subtext p,
-#subtext a {
+.subtext p,
+.subtext a {
   font-size: 30px;
   color: rgb(200, 200, 200);
 }
-#subtext a {
+.subtext a {
   color: #ff9900;
 }
-#subtext a:hover {
+.subtext a:hover {
   color: #ffb240;
+}
+.main-3 {
+  background-color: #1c1c1c;
+  height: 80vh;
+  display: flex;
+  align-items: center;
 }
