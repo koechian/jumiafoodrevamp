@@ -12,6 +12,7 @@ section {
   width: 30px;
 }
 header {
+  position: sticky;
   top: 3%;
   left: 2%;
   width: 100%;
@@ -19,7 +20,6 @@ header {
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
-  position: fixed;
   background: rgba(255, 255, 255, 0.302);
   backdrop-filter: blur(60px);
 }
@@ -52,9 +52,13 @@ header {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding: 10px;
+  padding: 15px;
   border-radius: 10px;
   margin-left: -100px;
+  transition: ease-in-out 0.3s;
+}
+#searchbar:hover {
+  outline: #ffb240 solid 2px;
 }
 div input {
   border: none;
@@ -107,4 +111,33 @@ a:hover {
 #right-elements div:nth-of-type(1) {
   width: 90%;
   justify-content: space-around;
+}
+.main {
+  outline: red dotted;
+  margin-top: 2%;
+  display: flex;
+  flex-direction: column;
+}
+.category-rows {
+  padding-top: 5%;
+  outline: yellow solid;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 20%;
+  padding-right: 20%;
+}
+.category-rows div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category-rows div img {
+  max-height: 100px;
+  width: auto;
+  transition: ease-in-out 0.3s;
+}
+.category-rows div img:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }
