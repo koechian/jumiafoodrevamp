@@ -113,14 +113,13 @@ a:hover {
   justify-content: space-around;
 }
 .main {
-  outline: red dotted;
   margin-top: 2%;
   display: flex;
   flex-direction: column;
+  height: 88vh;
 }
 .category-rows {
   padding-top: 5%;
-  outline: yellow solid;
   display: flex;
   align-items: center;
   justify-content: space-around;
@@ -140,4 +139,126 @@ a:hover {
 .category-rows div img:hover {
   transform: scale(1.1);
   cursor: pointer;
+}
+.cards-row {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2%;
+}
+#cards-row-text {
+  padding: 1%;
+  width: 40%;
+}
+.span-text {
+  font-family: "Segoe UI";
+  font-size: 70px;
+  line-height: 150%;
+}
+.span-special {
+  color: #ffb240;
+}
+#cards-row-buttons {
+  margin-top: 10%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.span-button {
+  outline: solid #ffb240 3px;
+  border-radius: 30px;
+  padding: 20px;
+  font-size: 22px;
+  transition: ease-in-out 0.3s;
+}
+.span-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  outline: transparent;
+}
+.span-button:nth-of-type(1) {
+  background-color: #ffb240;
+  color: white;
+}
+.span-button:nth-of-type(2):hover {
+  background-color: #ffb240;
+  color: white;
+}
+/* SCROLL DIV STYLES START */
+.scroll-prompt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.scroll-prompt img {
+  animation: ease-in-out scroll infinite 3s;
+}
+@keyframes scroll {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10%);
+  }
+}
+/* SCROLL DIV STYLES END */
+#cards-row-cards {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.cards {
+  width: 35%;
+  height: 90%;
+  border-radius: 20px;
+  object-fit: cover;
+  background-position: center;
+  background-size: cover;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  transition: ease 0.4s;
+}
+.cards:hover {
+  transform: scale(1.1);
+}
+.cards:nth-of-type(1) {
+  background-image: url("../../assets/landing-card.jpg");
+}
+.cards:nth-of-type(2) {
+  background-image: url("../../assets/healkthyeating-landing.jpg");
+}
+.filter {
+  background: rgb(0, 0, 0);
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.655) 0%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  height: 100%;
+  width: 100%;
+  border-radius: inherit;
+}
+.cards-content {
+  position: relative;
+  top: -35%;
+  padding: 10px;
+  width: 80%;
+}
+.cards-content span {
+  color: white;
+  font-size: 30px;
+}
+.cards-content-button {
+  font-family: "Montserrat", sans-serif;
+  padding: 12px;
+  font-size: 15px !important;
+  text-decoration: underline;
+  outline: none;
+  text-transform: uppercase;
+}
+.cards-content-button:hover {
+  text-decoration: none;
 }
