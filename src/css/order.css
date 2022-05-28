@@ -39,3 +39,9 @@
     margin-bottom: 20px;
     font-weight: 500;
 }
+#slider{
+    width: 60%;
+}
+input{
+    display:inline;
+}
