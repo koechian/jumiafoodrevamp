@@ -1,0 +1,41 @@
+#carousel{
+    width: 90vw;
+    height: 20vh;
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 50%;
+    transform:translateX(-50%) ;
+    align-items: center;
+    justify-content: space-around;
+}
+.deals{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #fe9900;
+    font-size: 50px;
+    color: white;
+    height: 85%;
+    width: 50%;
+}
+.carousel-item{
+    border-radius: 10px;
+    margin-left: 100px;
+}
+.bottom{
+    display: flex;
+    flex-direction: row;
+    outline: yellow solid;
+}
+.filters-side{
+    width: 30%;
+    padding: 20px;
+    padding-left: 50px;
+    outline: red dotted;
+}
+.filters-side h1{
+    font-size: 30px;
+    margin-bottom: 20px;
+    font-weight: 500;
+}
