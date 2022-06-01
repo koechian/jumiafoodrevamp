@@ -26,13 +26,11 @@
 .bottom{
     display: flex;
     flex-direction: row;
-    outline: yellow solid;
 }
 .filters-side{
     width: 30%;
     padding: 20px;
     padding-left: 50px;
-    outline: red dotted;
 }
 .filters-side h1{
     font-size: 30px;
@@ -70,5 +68,35 @@ input{
     flex-direction: column;
 }
 .choices-side{
-    
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+}
+.cards-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.card{
+    margin-top: 20px;
+    height: 266px;
+    width: 400px;
+    border-radius: 10px;
+}
+.card img{
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+}
+.card span{
+    margin-left: 10px;
+}
+.card span:nth-of-type(2){
+    color: rgb(142, 142, 142);
+}
+.top{
+    border-bottom: 20px;
+}
+.bottom h1{
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
 }
