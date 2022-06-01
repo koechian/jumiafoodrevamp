@@ -7,6 +7,7 @@
     <title>Jumia Food | Home</title>
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/order.css" />
     <link rel="stylesheet" href="css/resturant.css" />
 </head>
 <body>
@@ -33,84 +34,98 @@
           </div>
         </div>
       </header>
-      <div id="carousel">
-          <div class="carousel-item deals">Today's Deals</div>
-          <div class="carousel-item bread">
-              <img carousel-item-img src="../assets/bread-deal.png" alt="">
-          </div>
-          <div class="carousel-item kfc">
-            <img class="carousel-item-img" src="../assets/burger-deal.png">
-          </div>
+      <div class="banner">
+      </div>
+      <div class="band">
+          <div>
+          <h1>KFC Langata Road</h1>
+          <p>Minimum Delivery Fee Ksh 80</p>
+          <p>Delivery Time 40 mins</p>
+        </div>
+        <div><span>Home</span>&nbsp;>&nbsp;<span>Vendors</span>&nbsp;>&nbsp;<span>KFC Langata Road</span></div>
       </div>
       <section class="bottom">
       <div class="filters-side">
-        <h1>Filter</h1>
         <div class="options">
+            <div>
+                <span class="active-link">What we are eating</span>
+              </div>
           <div>
-          <input type="radio" name="group-1" id="most-popular"><label for="most-popular">Most Popular</label>
+          <span>Chicken Only</span>
         </div>
         <div>
-          <input type="radio" name="group-1" id=""><label for="">Delivery Speed</label>
+          <span>Deals</span>
         </div>
         <div>
-          <input type="radio" name="group-1" id=""><label for="">Rating</label>
-          <br><br><br>
+          <span>New Meals</span>
         </div>
+        <div>
+          <span>StreetWise Offers</span>
+        </div> 
+        <div>
+            <span>Lunchbox</span>
+          </div> 
           <div>
-          <input type="radio" name="group-2" id=""><label for="">Deals</label>
-        </div>
-        <div>
-          <input type="radio" name="group-2" id=""><label for="">Free Delivery</label><br><br>
-        </div>
-          <label for="">Price Range</label>
-          <input type="range" name="group-2" id="slider">
-          <span>$&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;$$$$</span> 
+            <span>Sharing Meals</span>
+          </div> 
+          <div>
+            <span>Combo Meals</span>
+          </div> 
+          <div>
+            <span>Burgers</span>
+          </div> 
+          <div>
+            <span>Wraps</span>
+          </div> 
+          <div>
+            <span>Krushers</span>
+          </div> 
       </div>
       </div>
       <div class="choices-side">
-        <div id="top">
-          <h1>Spots Near Me</h1>
           <div class="cards-container">
             <div class="card">
-              <img src="../assets/cinammon-resturant.jpg">
-              <span>Cinamon Indian Resturant</span><br>
-              <span class="subtext">Indian • Cheap</span>
+              <img src="../assets/nyamanyamaburger.jpg"><br>
+              <span>Nyama Nyama Burger</span><br>
+              <div><p class="subtext">2 Chicken Fillets, 1 Cheese Slice, <br>1 Hash Brown & Colonel Dressing</p>
+              <span><span id="price-label">Ksh 399</> <img class="plus-icon" src="../assets/plus.svg"></span>
+            </div>
             </div>
             <div class="card">
-              <img src="../assets/healthy-abc.jpg">
-              <span>ABC Place</span><br>
-              <span class="subtext">Vegeterian • Fair</span>
-            </div>
-            <div class="card">
-              <img src="../assets/pizza-inn image.jpg"> <br>
-              <span>Pizza Inn</span><br>
-              <span class="subtext">Pizza • Cheap</span>
-            </div>
-          </div>
-        </div>
-        <div id="bottom">
-          <h1>Love Chicken? You'll love theese</h1>
-          <div class="cards-container">
-            <div class="card">
-              <img src="../assets/galitos.jpg"><br>
-              <span>Galitos</span><br>
-              <span class="subtext">Chicken • Best Value</span>
-            </div>
-            <div class="card">
-              <img src="../assets/KFC.jpg"><br>
-              <span>KFC Chicken</span><br>
-              <span class="subtext">Fast Food • Cheap</span>
-            </div>
-            <div class="card">
-              <img src="../assets/swahili chicken wings.jpg"><br>
-              <span>Swahili Delight</span><br>
-              <span class="subtext">Traditional Foods • Value for Money</span>
-            </div>
-            <div class="card">
-              <img src="../assets/chicken inn.jpg"><br>
-              <span>Chicken Inn</span><br>
-              <span class="subtext">Chicken • Cheap</span>
-            </div>
+                <img src="../assets/chicken-lunchbox.jpg"><br>
+                <span>Chicken Lunchbox</span><br>
+                <div><p class="subtext">2 pieces regular chicken, regular chips<br>regular coleslaw & 350ml soda</p>
+                <span><span id="price-label">Ksh 399</span> <img class="plus-icon" src="../assets/plus.svg"></span>
+              </div>
+              </div>
+              <div class="card">
+                <img src="../assets/wings-lunchbox.jpg"><br>
+                <span>Wings Lunchbox</span><br>
+                <div><p class="subtext">5 pieces zinger wings (hot), regular chips, <br>regular coleslaw & 350ml soda</p>
+                <span><span id="price-label">Ksh 367</span> <img class="plus-icon" src="../assets/plus.svg"></span>
+              </div>
+              </div>
+              <div class="card">
+                <img src="../assets/crunch-master.jpg"><br>
+                <span>Crunch Master</span><br>
+                <div><p class="subtext">2 Crunch fillets, double cheese, tomato<br>lettuce, and sweet chilli sauce <br> all wrapped in a tortilla</p>
+                <span><span id="price-label">Ksh 690</span> <img class="plus-icon" src="../assets/plus.svg"></span>
+              </div>
+              </div>
+              <div class="card">
+                <img src="../assets/chicken-burger-lunchbox.jpg"><br>
+                <span>Chicken Burger Lunchbox</span><br>
+                <div><p class="subtext">Crunch Burger, regular chips<br>regular coleslaw & 350ml soda</p>
+                <span><span id="price-label">Ksh 367</span> <img class="plus-icon" src="../assets/plus.svg"></span>
+              </div>
+              </div>
+              <div class="card">
+                <img src="../assets/bazu-burger.jpg"><br>
+                <span>Bazu Burger</span><br>
+                <div><p class="subtext">Burger Only</p>
+                <span><span id="price-label">Ksh 690</span> <img class="plus-icon" src="../assets/plus.svg"></span>
+              </div>
+              </div>
           </div>
         </div>
       </div>
