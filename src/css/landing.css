@@ -332,7 +332,7 @@ a:hover {
   align-items: center;
   flex-direction: row;
 }
-#main-3-text{
+#main-3-text {
   width: 70%;
   height: 100%;
   padding-left: 3%;
@@ -341,7 +341,7 @@ a:hover {
   align-items: left;
   justify-content: center;
 }
-#main-3-image{
+#main-3-image {
   display: flex;
   align-items: baseline;
   justify-content: right;
@@ -349,21 +349,37 @@ a:hover {
   height: 100%;
   width: 50%;
 }
-#jumia-app-mockup{
+#jumia-app-mockup {
   max-width: 100%;
   height: auto;
   position: relative;
   top: 22.7%;
 }
-.app-buttons{
+.app-buttons {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: left;
   margin-top: 10%;
 }
-.app-store-buttons{
+.app-store-buttons {
   max-width: 190px;
   max-height: 62px;
   margin-left: 20px;
+}
+.cart-dropdown {
+  height: 70vh;
+  width: 30vw;
+  position: absolute;
+  right: 9vw;
+  top: 10vh;
+  background-color: rgba(65, 65, 65, 0.486);
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+}
+#close-cart {
+  background-image: url("../../assets/cart-close.svg");
+  width: 24px;
+  height: 24px;
+  outline: red 2px;
 }

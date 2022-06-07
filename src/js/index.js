@@ -16,3 +16,7 @@ $("#done").click(function () {
 $("#landing").click(function () {
   window.location.href = "/src/landing.html";
 });
+$(".cart-dropdown").hide();
+$("#cart").hover(function () {
+  $(".cart-dropdown").show();
+});
