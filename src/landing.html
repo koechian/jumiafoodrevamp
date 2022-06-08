@@ -7,13 +7,34 @@
     <title>Jumia Food | Home</title>
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/cart.css" />
   </head>
   <body>
     <header>
       <div class="cart-dropdown">
-        <div id="close-cart">
+        <div id="cart-header">
+          <div id="close-cart"></div>
         </div>
-        <div id="cart-body"></div>
+        <div id="cart-body">
+          <div class="cart-item">
+            <div id="cart-item-left">
+              <div>
+                <span>Wings Lunchbox</span>
+              </div>
+              <div>
+                <span>Quantity</span>
+                <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
+                <input value="1" type="number">
+                <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button>
+              </div>
+              <div>
+                <span>Price</span>
+                <span>Ksh 367</span>
+              </div>
+            </div>
+            <div id="cart-item-right"></div>
+          </div>
+        </div>
         <div id="cart-footer"></div>
 
       </div>
@@ -121,6 +142,7 @@
       </footer>
     </section>
   </body>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="/src/js/index.js"></script>
 </html>

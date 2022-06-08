@@ -367,19 +367,3 @@ a:hover {
   max-height: 62px;
   margin-left: 20px;
 }
-.cart-dropdown {
-  height: 70vh;
-  width: 30vw;
-  position: absolute;
-  right: 9vw;
-  top: 10vh;
-  background-color: rgba(65, 65, 65, 0.486);
-  border-radius: 20px;
-  backdrop-filter: blur(30px);
-}
-#close-cart {
-  background-image: url("../../assets/cart-close.svg");
-  width: 24px;
-  height: 24px;
-  outline: red 2px;
-}
