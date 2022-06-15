@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/landing.css" />
+    <link rel="stylesheet" href="css/checkout.css" />
+    <title>Checkout | Jumia Food</title>
+  </head>
+  <body>
+    <header>
+        <div id="left-elements">
+            <img class="logo" src="/assets/jumiafood-logo.svg" />
+          <div title="Update my Location" class="location">
+            <img class="icon" src="/assets/maps-and-flags.svg" alt="" />
+            <span>Strathmore University - Nairobi</span>
+          </div>
+        </div>
+        <div id="searchbar">
+          <input class="top-search" type="search" placeholder="Search"></input>
+          <button type="submit">Search</button>
+        </div>
+        <div id="right-elements">
+          <div>
+            <a href="">Profile</a>
+            <a href="">My Orders</a>
+            <a href="">Past Orders</a>
+          </div>
+          <div id="cart">
+            <img class="cart-icon icon"  src="/assets/shopping-cart.svg" alt="" srcset="" />
+          </div>
+        </div>
+      </header>
+<main>
+      <section class="details">
+          <div id="personal-information">
+              <div id="persional-information-header">
+                <h1>Checkout</h1>
+                <div id="breadcrumbs"><span>Home</span>&nbsp;>&nbsp;<span>Cart</span>&nbsp;>&nbsp;<span>Checkout</span></div>
+                <h2>Personal Information</h2>
+            </div>
+            <div id="personal-info-form">
+              <div>
+                <label for="">First Name</label><br>
+                <input type="text" name="first_name" id="first_name"><br>
+                <label for="">Last Name</label><br>
+                <input type="text" name="last_name" id="last_name"><br>
+              </div>
+              <div>
+                <label for="">Phone Number</label><br>
+                <input type="tel" name="phone_number" id="phone_number"> <br>
+                <label for="">Email</label><br>
+                <input type="email" name="email" id="email">
+              </div>
+            </div>
+          </div>
+          <h2>Delivery Details</h2>
+          <div id="delivery-details">
+            <div>
+              <label for="county">County</label><br>
+              <select name="county" id="county">
+                  <option value="Nairobi">Nairobi</option>
+                  <option value="Kisumu">Kisumu</option>
+                  <option value="Nakuru">Nakuru</option>
+                  <option value="Mackakos">Machakos</option>
+              </select><br>
+              <label for="street">Street</label><br>
+              <input type="text" name="street" id="street">
+            </div>
+            <div>
+              <label for="estate">Estate/Apartment</label><br>
+              <input type="text" name="estate" id="estate"><br>
+              <label for="house">House Number/Apartment</label><br>
+              <input type="text" name="house" id="house">
+            </div>
+          </div>
+          <div id="payment-details">
+            <h2>Payment Details</h2>
+          </div>
+      </section>
+      <section class="reciept">
+          <div id="order-details">
+              <div>
+                  <h2>Your&nbsp;Order:</h2>
+                  <span>Subtotal:</span><br><br>
+                  <span>Delivery:</span><br><br>
+                  <span>VAT:</span><br><br>
+                  <h3>Total:</h3>
+              </div>
+              <div>
+                  <span>Ksh 1523</span><br>
+                  <span>Ksh 70</span><br>
+                  <span>Ksh 243</span><br>
+                  <h3>Ksh 1836</h3>
+              </div>
+          </div>
+          <div id="buttons">
+              <button>Place Order</button>
+              <hr>
+          </div>
+          <div id="order-items"></div>
+      </section>
+    </main>
+  </body>
+</html>
