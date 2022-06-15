@@ -20,6 +20,10 @@ $("#landing").click(function () {
   window.location.href = "/src/landing.html";
 });
 
+$("#change").click(function () {
+  window.location.href = "/src/landing.html";
+});
+
 // Cart click and hover events
 $(".cart-dropdown").hide();
 $("#cart").hover(function () {
