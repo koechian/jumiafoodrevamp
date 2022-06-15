@@ -56,6 +56,10 @@ button {
   background-color: transparent;
   border: none;
 }
-.cart-item-left div:nth-of-type(1) {
-  outline: red dotted;
+#cart-item-left div {
+  display: flex;
+}
+#cart-item-left div div {
+  position: absolute;
+  right: 10px;
 }
