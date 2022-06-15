@@ -56,14 +56,16 @@ input:hover,select:hover{
     border-bottom:2px solid #ff9900;
 }
 
-#personal-info-form div:nth-of-type(2),#delivery-details div:nth-of-type(2){
+#personal-info-form div:nth-of-type(2),#delivery-details div:nth-of-type(2),#payment-details-right{
     margin-left: 20%;
 }
-#delivery-details{
+#delivery-details,#payment-details{
     display: flex;
     flex-direction: row;
 }
-
+input[type=radio]{
+    width: fit-content;
+}
 /* Left information section end  */
 
 /* Righ Reciept Section */
