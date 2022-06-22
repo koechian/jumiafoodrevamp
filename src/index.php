@@ -1,3 +1,34 @@
+<?php 
+  include "config.php";
+
+    if (isset($_POST['submit'])) {
+
+      $firstname = $_POST['firstname'];
+
+      $lastname = $_POST['lastname'];
+
+      $email = $_POST['email'];
+
+      $password = $_POST['password'];
+
+      $sql = "INSERT INTO 'users'('firstname', 'lastname', 'email', 'password') VALUES ('$firstname','$lastname','$email','$password')";
+
+      $result = $conn->query($sql);
+
+      if ($result == TRUE) {
+
+        echo "New record created successfully.";
+
+      }else{
+
+        echo "Error:". $sql . "<br>". $conn->error;
+
+      } 
+
+      $conn->close(); 
+
+    }
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -46,23 +77,33 @@
               >
             </h3>
           </div>
-          <div class="input-boxes">
+          <form action="/src/index.php" method="POST">
+            <div class="input-boxes">
             <div>
-              <label for="email">Email</label>
-              <input type="email" />
-            </div>
-            <div>
-              <div>
-                <label for="password">Password</label>
-                <input type="password" />
+                <label for="firstname">First Name</label>
+                <input type="text" id = "firstname" name = "firstname" />
               </div>
               <div>
-                <label for="confirm-passowrd">Confirm Password</label>
-                <input type="password" />
+                <label for="lastname">Last Name</label>
+                <input type="text" id = "lastname" name = "lastname" />
               </div>
+              <div>
+                <label for="email">Email</label>
+                <input type="email" id = "email" name = "email" />
+              </div>
+              <div>
+                <div>
+                  <label for="password">Password</label>
+                  <input type="password" id = "password" name = "password"/>
+                </div>
+                <div>
+                  <label for="confirm-password" >Confirm Password</label>
+                  <input type="password"/>
+                </div>
+              </div>
+              <input type ="submit" name = "submit" value = "Done">
             </div>
-            <button id="done">Done</button>
-          </div>
+          </form>
           <div class="hr-break">
             <hr />
             <span>or</span>

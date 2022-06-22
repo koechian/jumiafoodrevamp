@@ -10,10 +10,10 @@ $("#sign-in-button").click(function () {
   $(".register").hide();
   $(".login").show();
 });
-$("#done").click(function () {
-  $(".register").hide();
-  $(".login").show();
-});
+// $("#done").click(function () {
+//   $(".register").hide();
+//   $(".login").show();
+// });
 
 // Landing click events
 $("#landing").click(function () {
