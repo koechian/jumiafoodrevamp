@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 22, 2022 at 01:25 PM
+-- Generation Time: Jun 22, 2022 at 02:26 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -28,19 +28,20 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `users` (
-  `firstname` text NOT NULL,
-  `lastname` text NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(25) NOT NULL
+  `id` int(10) NOT NULL,
+  `firstname` varchar(40) NOT NULL,
+  `lastname` varchar(40) NOT NULL,
+  `email` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`firstname`, `lastname`, `email`, `password`) VALUES
-('Sean', 'Kinuthia', 'skinuthia19@gmail.com', 'sean2001'),
-('test', 'tester', 'test@gmail.com', 'test');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
+(1, 'Sean', 'Kinuthia', 'sean@gmail.com', 'sean'),
+(2, 'Test', 'Tester', 'test@gmail.com', 'test');
 
 --
 -- Indexes for dumped tables
@@ -50,7 +51,17 @@ INSERT INTO `users` (`firstname`, `lastname`, `email`, `password`) VALUES
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
-  ADD PRIMARY KEY (`email`);
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
