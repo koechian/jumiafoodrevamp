@@ -14,7 +14,7 @@ if (isset($_POST['login-submit'])) {
   $count = mysqli_num_rows($res);
 
   if ($count == 1) {
-    header("location: welcome.php");
+    header("location: src/landing.html");
   } else {
     $error = "Your Login Name or Password is invalid";
   }
@@ -34,7 +34,7 @@ if (isset($_POST['register-submit'])) {
 
 
   if ($insertion) {
-    header("location: welcome.php");
+    header("");
   } else {
     echo mysqli_error($conn);
   }
