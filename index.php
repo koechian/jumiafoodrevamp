@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include("src/php/config.php");
 
 if (isset($_POST['login-submit'])) {
@@ -10,10 +10,11 @@ if (isset($_POST['login-submit'])) {
 
 
   $res = mysqli_query($conn, $query);
-
+  $result = mysqli_fetch_assoc($res);
   $count = mysqli_num_rows($res);
 
   if ($count == 1) {
+    $_SESSION["user"] = $result['id'];
     header("location: src/landing.html");
   } else {
     $error = "Your Login Name or Password is invalid";
