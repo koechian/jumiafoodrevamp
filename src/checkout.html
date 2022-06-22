@@ -7,32 +7,63 @@
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/landing.css" />
     <link rel="stylesheet" href="css/checkout.css" />
+    <link rel="stylesheet" href="css/cart.css" />
     <title>Checkout | Jumia Food</title>
   </head>
   <body>
     <header>
-        <div id="left-elements">
-            <img class="logo" src="/assets/jumiafood-logo.svg" />
-          <div title="Update my Location" class="location">
-            <img class="icon" src="/assets/maps-and-flags.svg" alt="" />
-            <span>Strathmore University - Nairobi</span>
+      <div class="cart-dropdown">
+        <div id="cart-header">
+          <div id="close-cart"></div>
+        </div>
+        <div id="cart-body">
+          <div class="cart-item">
+            <div id="cart-item-left">
+              <div>
+                <span>Wings Lunchbox</span>
+              </div>
+              <div>
+                <span>Quantity</span>
+                <div>
+                <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
+                <input value="1" type="number">
+                <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
+              </div>
+              <div>
+                <span>Price</span>
+                <div>
+                <span>Ksh 367</span>
+              </div>
+              </div>
+            </div>
+            <div id="cart-item-right"></div>
           </div>
         </div>
-        <div id="searchbar">
-          <input class="top-search" type="search" placeholder="Search"></input>
-          <button type="submit">Search</button>
+        <div id="cart-footer"></div>
+
+      </div>
+      <div id="left-elements">
+          <img class="logo" src="/assets/jumiafood-logo.svg" />
+        <div title="Update my Location" class="location">
+          <img class="icon" src="/assets/maps-and-flags.svg" alt="" />
+          <span id="mylocation">Strathmore University - Nairobi</span>
         </div>
-        <div id="right-elements">
-          <div>
-            <a href="">Profile</a>
-            <a href="">My Orders</a>
-            <a href="">Past Orders</a>
-          </div>
-          <div id="cart">
-            <img class="cart-icon icon"  src="/assets/shopping-cart.svg" alt="" srcset="" />
-          </div>
+      </div>
+      <div id="searchbar">
+        <input class="top-search" type="search" placeholder="Search"></input>
+        <button type="submit">Search</button>
+      </div>
+      <div id="right-elements">
+        <div>
+          <a href="/profile-edit.html">Profile</a>
+          <a href="">My Orders</a>
+          <a href="">Past Orders</a>
         </div>
-      </header>
+        <div id="cart">
+          <img class="cart-icon icon"  src="/assets/shopping-cart.svg" alt="" srcset="" />
+        </div>
+      </div>
+    </header>
 <main>
       <section class="details">
           <div id="personal-information">
@@ -123,4 +154,9 @@
       </section>
     </main>
   </body>
+  <script src="/src/js/locator.js"></script>
+  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="/src/js/index.js"></script>
+
 </html>
