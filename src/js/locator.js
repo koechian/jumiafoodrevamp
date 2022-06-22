@@ -2,9 +2,6 @@ function locator() {
   function success(position) {
     const latitude = position.coords.latitude;
     const longitude = position.coords.longitude;
-
-    console.log(`Latitude: ${latitude} °, Longitude: ${longitude} °`);
-
     geoDecode(latitude, longitude);
   }
   function error() {
@@ -25,7 +22,8 @@ function locator() {
     Http.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var pos = JSON.parse(Http.response);
-        document.querySelector("#mylocation").innerHTML = pos["name"];
+        document.querySelector("#mylocation").innerHTML =
+          pos["name"] + "&nbsp;-&nbsp;" + pos["address"]["region"];
       }
     };
   }
@@ -33,7 +31,6 @@ function locator() {
   if (!navigator.geolocation) {
     console.log("not aupported by this browser");
   } else {
-    console.log("Starting");
     navigator.geolocation.getCurrentPosition(success, error);
   }
 }
