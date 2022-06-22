@@ -1,13 +1,6 @@
-<?php  
-       $servername = "localhost";  
-       $username = "root";  
-       $password = "";
-       $dbname = "jumia_food";   
-       $conn = new mysqli($servername, $username, $password, $dbname);
-
-       if ($conn->connect_error) {
-
-              die("Connection failed: " . $conn->connect_error);
-
-       }
-?>
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "jumia_food";
+$conn = new mysqli($servername, $username, $password, $dbname);

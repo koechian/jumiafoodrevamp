@@ -83,7 +83,7 @@ header {
   border: none;
   border-bottom: solid 2px #ff9900;
 }
-.input-boxes button {
+.button {
   width: 70%;
   margin-left: 50%;
   transform: translateX(-50%);
@@ -94,7 +94,7 @@ header {
   color: white;
   transition: ease 0.4s;
 }
-.input-boxes button:hover {
+.button:hover {
   background-color: #ffb240;
   cursor: pointer;
 }
@@ -152,7 +152,6 @@ header {
   width: 25px;
   height: 25px;
 }
-.hide{
+.hide {
   display: none;
 }
-
