@@ -174,7 +174,7 @@ a:hover {
   width: 40%;
 }
 .span-text {
-  font-family: "Segoe UI";
+  font-family: "Segoe UI Variable", sans-serif;
   font-size: 70px;
   line-height: 150%;
 }
