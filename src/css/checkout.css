@@ -1,138 +1,160 @@
-main{
-    margin-top: 1vh;
-    width: 99vw;
-    height: 87vh;
-    display: flex;
-    flex-direction: row;
+main {
+  margin-top: 1vh;
+  width: 99vw;
+  height: 87vh;
+  display: flex;
+  flex-direction: row;
 }
-section{
-    padding:40px ;
+section {
+  padding: 40px;
+  max-height: 100%;
 }
-h1{
-    font-size:30px;
-    font-weight: 400;
-    color: rgb(92, 92, 92);
-    margin-bottom: 20px;
+h1 {
+  font-size: 30px;
+  font-weight: 400;
+  color: rgb(92, 92, 92);
+  margin-bottom: 20px;
 }
 /* Left Information Section */
 
-.details{
-    display: flex;
-    flex-direction: column;
-    width: 70%;
+.details {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
-#breadcrumbs{
-    position: absolute;
-    right: 35%;
+#breadcrumbs {
+  position: absolute;
+  right: 35%;
 }
-#breadcrumbs span{
-    font-size: 15px;
-    color: rgb(144, 144, 144);
-    text-decoration: underline;
-    transition: ease-in-out 0.4s;
+#breadcrumbs span {
+  font-size: 15px;
+  color: rgb(144, 144, 144);
+  text-decoration: underline;
+  transition: ease-in-out 0.4s;
 }
-#breadcrumbs span:hover{
-    cursor: pointer;
-    color: #ff9900;
+#breadcrumbs span:hover {
+  cursor: pointer;
+  color: #ff9900;
 }
-#personal-info-form{
-    display: flex;
-    flex-direction: row;
+#personal-info-form {
+  display: flex;
+  flex-direction: row;
 }
-input,select{
-    width: 300px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 2px solid rgb(193, 193, 193);
-    transition: ease-in-out 0.3s;
+input,
+select {
+  width: 300px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid rgb(193, 193, 193);
+  transition: ease-in-out 0.3s;
 }
-input:focus,select:focus{
-    border: none;
-    outline: none;
-    border-bottom:2px solid #ff9900;
+input:focus,
+select:focus {
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ff9900;
 }
-input:hover,select:hover{
-    border-bottom:2px solid #ff9900;
+input:hover,
+select:hover {
+  border-bottom: 2px solid #ff9900;
 }
 
-#personal-info-form div:nth-of-type(2),#delivery-details div:nth-of-type(2),#payment-details-right{
-    margin-left: 20%;
+#personal-info-form div:nth-of-type(2),
+#delivery-details div:nth-of-type(2),
+#payment-details-right {
+  margin-left: 20%;
 }
-#delivery-details,#payment-details{
-    display: flex;
-    flex-direction: row;
+#delivery-details,
+#payment-details {
+  display: flex;
+  flex-direction: row;
 }
-input[type=radio]{
-    width: fit-content;
+input[type="radio"] {
+  width: fit-content;
 }
 /* Left information section end  */
 
 /* Righ Reciept Section */
-.reciept{
-    width: 32%;
+.reciept {
+  width: 32%;
 }
-.reciept::after{
-    content: '';
-    position:absolute;
+.reciept::after {
+  content: "";
+  position: absolute;
 
-    width: 2px;
-    height: 50%;
-    background-color: rgba(206, 206, 206, 0.552);
+  width: 2px;
+  height: 50%;
+  background-color: rgba(206, 206, 206, 0.552);
 
-    top: 27%;
-    right: 32%;
-    }
-h2{
-    font-size: 24px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    margin-top: 15px;
+  top: 27%;
+  right: 32%;
 }
-.reciept span{
-    font-size: 20px;
-    color: grey;
+h2 {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
-#order-details{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    margin-bottom: 40px;
+.reciept span {
+  font-size: 20px;
+  color: grey;
 }
-#order-details div:nth-of-type(2){
-    margin-top: 44px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    width: 100%;
-    padding-right:40px ;
+#order-details {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 40px;
 }
-#buttons{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#order-details div:nth-of-type(2) {
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 100%;
+  padding-right: 40px;
 }
-#buttons button{
-    width: 60%;
-    padding: 10px;
-    font-size: 20px;
-    border-radius: 7px;
-    border: none;
-    color: white;
-    background-color: #ff9900;
-    margin-bottom: 30px;
-    transition:ease-in-out 0.3s;
+#buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-#buttons button:hover{
-    cursor: pointer;
-    transform: scale(1.02);
-    background-color: #ff6a00;
+#buttons button {
+  width: 60%;
+  padding: 10px;
+  font-size: 20px;
+  border-radius: 7px;
+  border: none;
+  color: white;
+  background-color: #ff9900;
+  margin-bottom: 30px;
+  transition: ease-in-out 0.3s;
 }
-#buttons hr{
-    border: none;
-    border-bottom: 3px solid #ffb3408e;
-    margin-top: 10px;
-    width: 70%;
+#buttons button:hover {
+  cursor: pointer;
+  transform: scale(1.02);
+  background-color: #ff6a00;
+}
+#buttons hr {
+  border: none;
+  border-bottom: 3px solid #ffb3408e;
+  margin-top: 10px;
+  width: 70%;
 }
 
 /* Right Reciept Section end */
+#order-items {
+  overflow-y: scroll;
+  height: 50vh;
+}
+#order-items::-webkit-scrollbar {
+  background-color: rgba(214, 214, 214, 0.383);
+  width: 10px;
+}
+#order-items::-webkit-scrollbar-thumb {
+  background-color: #ff9900a5;
+  border-radius: 20px;
+}
+#order-items::-webkit-scrollbar-thumb:hover {
+  background-color: #ff9900;
+}
