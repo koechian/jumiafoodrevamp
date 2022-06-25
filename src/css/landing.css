@@ -367,3 +367,6 @@ a:hover {
   max-height: 62px;
   margin-left: 20px;
 }
+.hidden {
+  display: none;
+}

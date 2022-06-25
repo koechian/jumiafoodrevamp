@@ -2,23 +2,8 @@
 
 session_start();
 include("config.php");
+include("../components/head.php");
 ?>
-
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumia Food | Home</title>
-    <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="stylesheet" href="../css/landing.css" />
-    <link rel="stylesheet" href="../css/order.css" />
-    <link rel="stylesheet" href="../css/cart.css" />
-
-</head>
-<body>
  <?php  include('../components/header.php');?>
       <div id="carousel">
           <div class="carousel-item deals">Today's Deals</div>
@@ -59,22 +44,22 @@ include("config.php");
           <h1>Spots Near Me</h1>
           <div class="cards-container">
             <?php
-
                 $count=0;
                 $sql='SELECT * FROM resturants';
-
                 $result=mysqli_query($conn,$sql);
-
             while($res=mysqli_fetch_assoc($result)){
               if($count>3){
                 break;
               }
               else{
-              echo "<div class='card'>
+                echo "<form action='resturant.php' method='GET'>
+                <div class='card'>
                  <img src=".$res['image']."><br>
                  <span>".$res['name']."</span><br>
                  <span class='subtext'>".$res['tags']."</span>
-              </div>";
+                 <input class='hidden' type='submit' id='redirect' value='".$res['id']."' name='page'>
+              </div>
+              </form>";
               $count+=1;
               }
             }
@@ -82,9 +67,8 @@ include("config.php");
           </div>
         </div>
         <div id="bottom">
-          <h1>Love Chicken? You'll love theese</h1>
+          <h1>Love Chicken? You'll love these</h1>
           <div class="cards-container">
-
           <?php
 
           $sql="SELECT * FROM resturants WHERE food_served='chicken'";
@@ -105,8 +89,5 @@ include("config.php");
     </section>
     
 </body>
-<script src="../js/locator.js"></script>
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="../js/index.js"></script>
+<?php include('../components/scripts.php'); ?>
 </html>

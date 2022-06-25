@@ -1,80 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumia Food | Home</title>
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/landing.css" />
-    <link rel="stylesheet" href="css/order.css" />
-    <link rel="stylesheet" href="css/resturant.css" />
-    <link rel="stylesheet" href="css/cart.css" />
+ <?php
+    include("../components/head.php");
+    include('../components/header.php');
+    
 
-</head>
-<body>
-  <header>
-    <div class="cart-dropdown">
-      <div id="cart-header">
-        <div id="close-cart"></div>
-      </div>
-      <div id="cart-body">
-        <div class="cart-item">
-          <div id="cart-item-left">
-            <div>
-              <span id="item-heading">Wings Lunchbox</span>
-              <br><br><br>
-              <span>Price</span><br><br>
-              <span>Quantity</span>
-            </div>
-            <div>
-              <div>
-                <div><span>Ksh 327</span></div>
-                <div>
-                <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                <input value="1" type="number">
-                <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-              </div>
-            </div>
-          </div>
-          <div id="cart-item-right">
-            <div>
-              <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-            </div>
-            <div>
-              <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-              <span>Remove</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div id="cart-footer">
-        <button id="cart-checkout" onclick="window.location.replace('checkout.html')">Checkout</button>
-      </div>
+    $page=$_GET['page'];
 
-    </div>
-    <div id="left-elements">
-        <img class="logo" src="../assets/jumiafood-logo.svg" />
-      <div title="Update my Location" class="location">
-        <img class="icon" src="../assets/maps-and-flags.svg" alt="" />
-        <span id="mylocation">Strathmore University - Nairobi</span>
-      </div>
-    </div>
-    <div id="searchbar">
-      <input class="top-search" type="search" placeholder="Search"></input>
-      <button type="submit">Search</button>
-    </div>
-    <div id="right-elements">
-      <div>
-        <a href="php/profile-edit.php">Profile</a>
-        <a href="">My Orders</a>
-        <a href="">Past Orders</a>
-      </div>
-      <div id="cart">
-        <img class="cart-icon icon"  src="../assets/shopping-cart.svg" alt="" srcset="" />
-      </div>
-    </div>
-  </header>
+    $sql="SELECT * FROM resturants WHERE id=$page";
+
+    
+    ?>
+  
       <div class="banner">
       </div>
       <div class="band">
@@ -173,10 +108,8 @@
     </section>
     
 </body>
-<script src="js/locator.js"></script>
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/index.js"></script>
+<?php include('../components/scripts.php'); ?>
+
 
 
 </html>
