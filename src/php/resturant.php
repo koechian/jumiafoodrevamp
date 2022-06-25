@@ -1,4 +1,6 @@
  <?php
+    session_start();
+    include("config.php");
     include("../components/head.php");
     include('../components/header.php');
     
@@ -7,17 +9,24 @@
 
     $sql="SELECT * FROM resturants WHERE id=$page";
 
-    
+    $result=mysqli_query($conn,$sql);
+  
     ?>
   
-      <div class="banner">
+      <div style="background-image: url(<?php 
+      $res=mysqli_fetch_assoc($result);
+      echo $res['cover_image'];
+
+       ?>)" class="banner">
       </div>
       <div class="band">
-          <div>
-          <h1>KFC Langata Road</h1>
-          <p>Minimum Delivery Fee Ksh 80</p>
-          <p>Delivery Time 40 mins</p>
-        </div>
+        <?php
+           echo "<div>
+            <h1>".$res['name']."</h1>
+            <p>Minimum Delivery Fee Ksh ".$res['delivery_fee']."</p>
+            <p>Delivery Time ".$res['delivery_time']." mins</p>
+            </div>";
+        ?>
         <div><span>Home</span>&nbsp;>&nbsp;<span>Vendors</span>&nbsp;>&nbsp;<span>KFC Langata Road</span></div>
       </div>
       <section class="bottom">
@@ -60,48 +69,23 @@
       </div>
       <div class="choices-side">
           <div class="cards-container">
-            <div class="card">
-              <img src="../assets/nyamanyamaburger.jpg"><br>
-              <span>Nyama Nyama Burger</span><br>
-              <div><p class="subtext">2 Chicken Fillets, 1 Cheese Slice, <br>1 Hash Brown & Colonel Dressing</p>
-              <span><span id="price-label">Ksh 399</> <img class="plus-icon" src="../assets/plus.svg"></span>
+            <?php 
+
+            $sql="SELECT * FROM menu WHERE resturant_id=$page"; 
+            $result=mysqli_query($conn,$sql);
+
+            while($res=mysqli_fetch_assoc($result)){
+              echo " <div class='card'>
+              <img src='".$res['product_image']."'><br>
+              <span>".$res['product_name']."</span><br>
+              <div><p class='subtext'>".$res['description']."</p>
+              <span><span id='price-label'>Ksh".$res['product_price']."</span> <img class='plus-icon' src='../../assets/plus.svg'></span>
             </div>
-            </div>
-            <div class="card">
-                <img src="../assets/chicken-lunchbox.jpg"><br>
-                <span>Chicken Lunchbox</span><br>
-                <div><p class="subtext">2 pieces regular chicken, regular chips<br>regular coleslaw & 350ml soda</p>
-                <span><span id="price-label">Ksh 399</span> <img class="plus-icon" src="../assets/plus.svg"></span>
-              </div>
-              </div>
-              <div class="card">
-                <img src="../assets/wings-lunchbox.jpg"><br>
-                <span>Wings Lunchbox</span><br>
-                <div><p class="subtext">5 pieces zinger wings (hot), regular chips, <br>regular coleslaw & 350ml soda</p>
-                <span><span id="price-label">Ksh 367</span> <img class="plus-icon" src="../assets/plus.svg"></span>
-              </div>
-              </div>
-              <div class="card">
-                <img src="../assets/crunch-master.jpg"><br>
-                <span>Crunch Master</span><br>
-                <div><p class="subtext">2 Crunch fillets, double cheese, tomato<br>lettuce, and sweet chilli sauce <br> all wrapped in a tortilla</p>
-                <span><span id="price-label">Ksh 690</span> <img class="plus-icon" src="../assets/plus.svg"></span>
-              </div>
-              </div>
-              <div class="card">
-                <img src="../assets/chicken-burger-lunchbox.jpg"><br>
-                <span>Chicken Burger Lunchbox</span><br>
-                <div><p class="subtext">Crunch Burger, regular chips<br>regular coleslaw & 350ml soda</p>
-                <span><span id="price-label">Ksh 367</span> <img class="plus-icon" src="../assets/plus.svg"></span>
-              </div>
-              </div>
-              <div class="card">
-                <img src="../assets/bazu-burger.jpg"><br>
-                <span>Bazu Burger</span><br>
-                <div><p class="subtext">Burger Only</p>
-                <span><span id="price-label">Ksh 690</span> <img class="plus-icon" src="../assets/plus.svg"></span>
-              </div>
-              </div>
+            </div>";
+           
+          }
+
+?>
           </div>
         </div>
       </div>

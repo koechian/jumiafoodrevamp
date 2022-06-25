@@ -76,11 +76,14 @@ include("../components/head.php");
           $result=mysqli_query($conn,$sql);
 
           while($res=mysqli_fetch_assoc($result)){
-            echo "<div class='card'>
+            echo "<form action='resturant.php' method='GET'>
+            <div class='card'>
             <img src=".$res['image']."><br>
             <span>".$res['name']."</span><br>
             <span class='subtext'>".$res['tags']."</span>
-            </div>";
+            <input class='hidden' type='submit' id='redirect' value='".$res['id']."' name='page'>
+            </div>
+            </form>";
             }
             ?>
           </div>
