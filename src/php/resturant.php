@@ -6,13 +6,14 @@
     
 
     $page=$_GET['page'];
+    $user=$_SESSION['user'];
 
     $sql="SELECT * FROM resturants WHERE id=$page";
 
     $result=mysqli_query($conn,$sql);
   
     ?>
-  
+      <input type="hidden" id="user-id" name="user" value="<?php echo $user?>">
       <div style="background-image: url(<?php 
       $res=mysqli_fetch_assoc($result);
       echo $res['cover_image'];
@@ -79,7 +80,7 @@
               <img src='".$res['product_image']."'><br>
               <span>".$res['product_name']."</span><br>
               <div><p class='subtext'>".$res['description']."</p>
-              <span><span id='price-label'>Ksh".$res['product_price']."</span> <img class='plus-icon' src='../../assets/plus.svg'></span>
+              <span><span id='price-label'>Ksh".$res['product_price']."</span> <img data-id='".$res['id']."' class='add-to-cart plus-icon' src='../../assets/plus.svg'></span>
             </div>
             </div>";
            
