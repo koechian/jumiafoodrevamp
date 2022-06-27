@@ -45,13 +45,10 @@ include("../components/head.php");
           <div class="cards-container">
             <?php
                 $count=0;
-                $sql='SELECT * FROM resturants';
+                $sql='SELECT * FROM resturants WHERE NOT food_served="chicken"';
                 $result=mysqli_query($conn,$sql);
             while($res=mysqli_fetch_assoc($result)){
-              if($count>3){
-                break;
-              }
-              else{
+             
                 echo "<form action='resturant.php' method='GET'>
                 <div class='card'>
                  <img src=".$res['image']."><br>
@@ -62,7 +59,7 @@ include("../components/head.php");
               </form>";
               $count+=1;
               }
-            }
+            
               ?>
           </div>
         </div>
