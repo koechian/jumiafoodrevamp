@@ -42,6 +42,7 @@ $(document).ready(function () {
   function populateCart(data) {
     $(
       $.each(data, function (key, value) {
+        $("#cart-body").html("");
         $("#cart-body").append(
           "<div class='cart-item'><div id='cart-item-left'><div><span id='item-heading'>" +
             value.product_name +
