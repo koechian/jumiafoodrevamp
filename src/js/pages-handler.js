@@ -13,7 +13,7 @@ $(document).ready(function () {
       url: "../components/cart-handler.php",
       data: data,
       success: function (response) {
-        alert(response);
+        alert("Item Added to Cart");
         fetchCart(data["id"]);
       },
     });
