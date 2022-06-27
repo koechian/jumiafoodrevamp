@@ -18,6 +18,7 @@ $(document).ready(function () {
       },
     });
   });
+  fetchCart(2);
   function fetchCart(id) {
     var data = {
       id: id,
@@ -29,6 +30,7 @@ $(document).ready(function () {
       data: data,
       success: function (response) {
         var cart = JSON.parse(response);
+        $("#cart").attr("data-after", cart.length);
       },
     });
   }

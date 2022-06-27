@@ -17,7 +17,7 @@
         <a href="">My Orders</a>
         <a href="">Past Orders</a>
       </div>
-      <div id="cart">
+      <div data-after='' id="cart">
         <img class="cart-icon icon"  src="../../assets/shopping-cart.svg" alt="" srcset="" />
       </div>
     </div>
