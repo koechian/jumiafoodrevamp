@@ -13,7 +13,10 @@ $(document).ready(function () {
       url: "../components/cart-handler.php",
       data: data,
       success: function (response) {
-        alert("Item Added to Cart");
+        iziToast.success({
+          title: "OK",
+          message: "Item has been Added to Cart",
+        });
         fetchCart(data["id"]);
       },
     });

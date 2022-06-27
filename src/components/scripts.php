@@ -3,3 +3,5 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="../js/index.js"></script>
   <script src="../js/pages-handler.js"></script>
+  <script src="../js/iziToast.min.js"></script>
+

@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="../css/order.css" />
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/resturant.css" />
+    <link rel="stylesheet" href="../css/iziToast.min.css" />
+
 
 
 </head>
