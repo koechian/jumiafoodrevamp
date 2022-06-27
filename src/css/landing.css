@@ -44,7 +44,7 @@ header {
   position: relative;
   top: -12px;
   left: 3px;
-  content: "4";
+  content: attr(data-after);
   width: 22px;
   height: 22px;
   background-color: #ffb240;
@@ -366,4 +366,7 @@ a:hover {
   max-width: 190px;
   max-height: 62px;
   margin-left: 20px;
+}
+.hidden {
+  display: none;
 }
