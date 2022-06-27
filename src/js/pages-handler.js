@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  fetchCart($("#user-id").val());
   jQuery(".card").click(function () {
     this.children[5].click();
   });
@@ -21,7 +22,7 @@ $(document).ready(function () {
       },
     });
   });
-  fetchCart(2);
+
   function fetchCart(id) {
     var data = {
       id: id,

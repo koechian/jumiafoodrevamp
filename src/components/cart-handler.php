@@ -22,7 +22,7 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
     include "../php/config.php";
 
     $user=$_GET['id'];
-    $fetch="SELECT * FROM cart WHERE id=$user";
+    $fetch="SELECT menu.product_name, menu.product_price,menu.product_image FROM cart INNER JOIN menu ON cart.item_id=menu.id WHERE cart.id=$user";
 
     $result=mysqli_query($conn,$fetch);
     $res=array();
