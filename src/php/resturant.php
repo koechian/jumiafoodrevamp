@@ -28,7 +28,7 @@
             <p>Delivery Time ".$res['delivery_time']." mins</p>
             </div>";
         ?>
-        <div><span>Home</span>&nbsp;>&nbsp;<span>Vendors</span>&nbsp;>&nbsp;<span>KFC Langata Road</span></div>
+        <div><span>Home</span>&nbsp;>&nbsp;<span>Vendors</span>&nbsp;>&nbsp;<span><? echo $res['name']?></span></div>
       </div>
       <section class="bottom">
       <div class="filters-side">
