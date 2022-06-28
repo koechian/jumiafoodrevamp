@@ -7,6 +7,8 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
         case 'insert' : insert();break;
         case 'fetch' :fetch();break;
         case 'order' :order();break;
+        case 'remove' :removeItem();break;
+
     }
 }
  function insert(){
@@ -50,4 +52,17 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
     }
     $i++;
    }
- }
+}
+   function removeItem(){
+    include "../php/config.php";
+
+    $user=$_GET['id'];
+    $item=$_GET['item_id'];
+    $delete="DELETE FROM cart WHERE id=$user AND item_id=$item";
+
+    $result=mysqli_query($conn,$delete);
+    
+    echo mysqli_error($conn);
+
+   }
+ 
