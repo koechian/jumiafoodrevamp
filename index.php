@@ -15,7 +15,7 @@ if (isset($_POST['login-submit'])) {
 
   if ($count == 1) {
     $_SESSION["user"] = $result['id'];
-    header("location: src/landing.html");
+    header("location: src/php/landing.php");
   } else {
     $error = "Your Login Name or Password is invalid";
   }

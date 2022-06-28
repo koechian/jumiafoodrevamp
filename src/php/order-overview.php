@@ -3,8 +3,8 @@
 session_start();
 include("config.php");
 include("../components/head.php");
+include('../components/header.php');
 ?>
- <?php  include('../components/header.php');?>
       <div id="carousel">
           <div class="carousel-item deals">Today's Deals</div>
           <div class="carousel-item bread">
