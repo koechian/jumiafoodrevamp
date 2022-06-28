@@ -30,6 +30,18 @@
   height: 80%;
   margin-top: 10px;
   overflow-y: scroll;
+  padding: 5px;
+}
+#cart-body::-webkit-scrollbar {
+  background-color: rgba(214, 214, 214, 0.383);
+  width: 10px;
+}
+#cart-body::-webkit-scrollbar-thumb {
+  background-color: #ff9900a5;
+  border-radius: 20px;
+}
+#cart-body::-webkit-scrollbar-thumb:hover {
+  background-color: #ff9900;
 }
 .cart-item {
   border-radius: 10px;

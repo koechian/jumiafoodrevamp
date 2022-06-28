@@ -27,41 +27,7 @@
       </div>
       <section class="bottom">
       <div class="filters-side">
-        <div class="options">
-            <div>
-                <span class="active-link">What we are eating</span>
-              </div>
-          <div>
-          <span>Chicken Only</span>
-        </div>
-        <div>
-          <span>Deals</span>
-        </div>
-        <div>
-          <span>New Meals</span>
-        </div>
-        <div>
-          <span>StreetWise Offers</span>
-        </div> 
-        <div>
-            <span>Lunchbox</span>
-          </div> 
-          <div>
-            <span>Sharing Meals</span>
-          </div> 
-          <div>
-            <span>Combo Meals</span>
-          </div> 
-          <div>
-            <span>Burgers</span>
-          </div> 
-          <div>
-            <span>Wraps</span>
-          </div> 
-          <div>
-            <span>Krushers</span>
-          </div> 
-      </div>
+        
       </div>
       <div class="choices-side">
           <div class="cards-container">
