@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  console.log($("#user-id").val());
   fetchCart($("#user-id").val());
   jQuery(".card").click(function () {
     this.children[5].click();
@@ -40,9 +41,9 @@ $(document).ready(function () {
     });
   }
   function populateCart(data) {
+    $("#cart-body").html("");
     $(
       $.each(data, function (key, value) {
-        $("#cart-body").html("");
         $("#cart-body").append(
           "<div class='cart-item'><div id='cart-item-left'><div><span id='item-heading'>" +
             value.product_name +

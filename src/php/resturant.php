@@ -1,19 +1,14 @@
  <?php
-    session_start();
     include("config.php");
     include("../components/head.php");
     include('../components/header.php');
     
 
     $page=$_GET['page'];
-    $user=$_SESSION['user'];
-
     $sql="SELECT * FROM resturants WHERE id=$page";
-
     $result=mysqli_query($conn,$sql);
   
     ?>
-      <input type="hidden" id="user-id" name="user" value="<?php echo $user?>">
       <div style="background-image: url(<?php 
       $res=mysqli_fetch_assoc($result);
       echo $res['cover_image'];

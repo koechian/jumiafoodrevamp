@@ -12,8 +12,11 @@
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/resturant.css" />
     <link rel="stylesheet" href="../css/iziToast.min.css" />
-
-
-
 </head>
+<?php 
+session_start();
+$user=$_SESSION['user'];
+?>
+    <input type="hidden" id="user-id" name="user" value="<?php echo $user?>">
+
 <body>

@@ -1,12 +1,10 @@
 <?php
-
-session_start();
 include("config.php");
 include("../components/head.php");
 include('../components/header.php');
 ?>
     <section>
-      <div class="main">
+            <div class="main">
         <div class="category-rows">
           <div><img src="../../assets/deals.png" alt="" />
           <span>Explore Deals</span></div>
@@ -23,19 +21,19 @@ include('../components/header.php');
               <span class="span-text">to&nbsp;<span class="span-text span-special">order</span>&nbsp; today?</span>
             </div>
             <div id="cards-row-buttons">
-              <span class="span-button" onclick="window.location.href='php/order-overview.php'">Explore Resturants</span>
+              <span class="span-button" onclick="window.location.href='order-overview.php'">Explore Resturants</span>
               <span class="span-button">Same as last time</span>
             </div>
           </div>
           <div id="cards-row-cards" >
-            <div class="cards" onclick="window.location.href='order-overveiw.html'">
+            <div class="cards" onclick="window.location.href='order-overveiw.php'">
               <div class="filter"></div>
               <div class="cards-content"><span>Explore breakfasts from Wangu's kitchen</span><br><br>
                 <span class="cards-content-button span-button">order now</span>
               </div>
             </div>
             <div class="cards">
-              <div class="filter" onclick="window.location.href='order-overveiw.html'"></div>
+              <div class="filter" onclick="window.location.href='order-overveiw.php'"></div>
               <div class="cards-content"><span>Healthy Treats from ABC Place</span><br><br>
               <span class="cards-content-button span-button">order now</span></div>
             </div>
