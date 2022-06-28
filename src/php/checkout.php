@@ -20,15 +20,15 @@ include('../components/header.php');
             <div id="personal-info-form">
               <div>
                 <label for="">First Name</label><br>
-                <input type="text" name="first_name" id="first_name"><br>
+                <input class='checkout-input' type="text" name="first_name" id="first_name"><br>
                 <label for="">Last Name</label><br>
-                <input type="text" name="last_name" id="last_name"><br>
+                <input class='checkout-input' type="text" name="last_name" id="last_name"><br>
               </div>
               <div>
                 <label for="">Phone Number</label><br>
-                <input type="tel" name="phone_number" id="phone_number"> <br>
+                <input class='checkout-input' type="tel" name="phone_number" id="phone_number"> <br>
                 <label for="">Email</label><br>
-                <input type="email" name="email" id="email">
+                <input class='checkout-input' type="email" name="email" id="email">
               </div>
             </div>
           </div>
@@ -43,29 +43,29 @@ include('../components/header.php');
                   <option value="Mackakos">Machakos</option>
               </select><br>
               <label for="street">Street</label><br>
-              <input type="text" name="street" id="street">
+              <input class='checkout-input' type="text" name="street" id="street">
             </div>
             <div>
               <label for="estate">Estate/Apartment</label><br>
-              <input type="text" name="estate" id="estate"><br>
+              <input class='checkout-input' type="text" name="estate" id="estate"><br>
               <label for="house">House Number/Apartment</label><br>
-              <input type="text" name="house" id="house">
+              <input class='checkout-input' type="text" name="house" id="house">
             </div>
           </div>
           <h2>Payment Details</h2>
           <div id="payment-details">
             <div>
               <h3>Pay on Delivery</h3>
-              <input type="radio" name="" id="">
+              <input  type="radio" name="" id="">
               <label for="">Cash</label><br>
-              <input type="radio" name="" id="">
+              <input  type="radio" name="" id="">
               <label for="">Mobile Money</label>
             </div>
       
             <div id="payment-details-right">
               <h3>Pay Now</h3>
               <div>
-                <input type="radio" name="" id=" ">
+                <input  type="radio" name="" id=" ">
               <label for="">Mobile Money</label>
             </div>
             <div>

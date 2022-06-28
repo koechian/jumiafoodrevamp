@@ -1,6 +1,4 @@
 <?php
-
-session_start();
 include("config.php");
 include("../components/head.php");
 include('../components/header.php');

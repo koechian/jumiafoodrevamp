@@ -11,8 +11,8 @@
     <link rel="stylesheet" href="../css/order.css" />
     <link rel="stylesheet" href="../css/cart.css" />
     <link rel="stylesheet" href="../css/resturant.css" />
-    <link rel="stylesheet" href="../css/checkout.css" />
     <link rel="stylesheet" href="../css/iziToast.min.css" />
+    <link rel="stylesheet" href="../css/checkout.css" />
 </head>
 <?php 
 session_start();
