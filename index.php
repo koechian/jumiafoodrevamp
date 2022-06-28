@@ -52,6 +52,7 @@ if (isset($_POST['register-submit'])) {
   <title>Login | Jumia Food</title>
   <link rel="stylesheet" href="src/css/fonts.css" />
   <link rel="stylesheet" href="src/css/login.css" />
+  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
 </head>
 
 <body>

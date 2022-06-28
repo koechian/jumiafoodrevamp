@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  var cart = null;
   fetchCart($("#user-id").val());
   jQuery(".card").click(function () {
     this.children[5].click();
@@ -22,9 +23,53 @@ $(document).ready(function () {
       },
     });
   });
+  $("#order").on("click", function (e) {
+    var data = {
+      id: $("#user-id").val(),
+      orderitems: cart,
+      action: "order",
+    };
+    $.ajax({
+      type: "GET",
+      url: "../components/cart-handler.php",
+      data: data,
+      success: function (response) {
+        iziToast.show({
+          theme: "light",
+          icon: "icon-success",
+          title: "Thank You",
+          message: "Your order has been Placed",
+          position: "topCenter", // bottomRight, bottomLeft, topRight, topLeft, topCenter, bottomCenter
+          progressBarColor: "#ff9900",
+          buttons: [
+            [
+              "<button>Continue Shopping</button>",
+              function (instance, toast) {
+                window.location.replace("order-overview.php");
+              },
+              true,
+            ], // true to focus
+            [
+              "<button>Logout</button>",
+              function (instance, toast) {
+                console.log("clicked");
+              },
+            ],
+          ],
+          onOpening: function (instance, toast) {
+            console.info("callback abriu!");
+          },
+          onClosing: function (instance, toast, closedBy) {
+            console.info("closedBy: " + closedBy); // tells if it was closed by 'drag' or 'button'
+          },
+        });
+        fetchCart(data["id"]);
+        populateCheckout(cart);
+      },
+    });
+  });
 
   function fetchCart(id) {
-    console.log("first");
     var data = {
       id: id,
       action: "fetch",
@@ -34,7 +79,7 @@ $(document).ready(function () {
       url: "../components/cart-handler.php",
       data: data,
       success: function (response) {
-        var cart = JSON.parse(response);
+        cart = JSON.parse(response);
         $("#cart").attr("data-after", cart.length);
         populateCart(cart);
         populateCheckout(cart);

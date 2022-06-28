@@ -15,7 +15,7 @@
       <div>
         <a href="../php/profile-edit.php"><?php echo $userdata[0]['firstname']?></a>
         <a href="">My Orders</a>
-        <a href="">Past Orders</a>
+        <a href="history.php">Past Orders</a>
       </div>
       <div data-after='' id="cart">
         <img class="cart-icon icon"  src="../../assets/shopping-cart.svg" alt="" srcset="" />

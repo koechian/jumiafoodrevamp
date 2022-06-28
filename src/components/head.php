@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jumia Food | Home</title>
     <link rel="shortcut icon" href="../../assets/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../css/history.css" />
     <link rel="stylesheet" href="../css/fonts.css" />
     <link rel="stylesheet" href="../css/landing.css" />
     <link rel="stylesheet" href="../css/order.css" />

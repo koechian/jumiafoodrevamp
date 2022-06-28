@@ -6,6 +6,7 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
     switch($action){
         case 'insert' : insert();break;
         case 'fetch' :fetch();break;
+        case 'order' :order();break;
     }
 }
  function insert(){
@@ -32,4 +33,21 @@ if(isset($_GET['id'])&&!empty($_GET['id'])){
     }
 
    echo json_encode($res);
+ }
+ function order(){
+    include "../php/config.php";
+    $response=$_GET['orderitems'];
+    $i=0;
+    $user=$_GET['id'];
+
+   while($i<count($response)){
+    $sql="INSERT INTO orders (item_id,id)VALUES(".$response[$i]['item_id'].",".$user.")";
+    $delete="DELETE FROM cart WHERE item_id=".$response[$i]['item_id'];
+    $result=mysqli_query($conn,$sql);
+
+    if($result){
+    $res=mysqli_query($conn,$delete);
+    }
+    $i++;
+   }
  }

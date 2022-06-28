@@ -92,7 +92,7 @@ include('../components/header.php');
               </div>
           </div>
           <div id="buttons">
-              <button>Place Order</button>
+              <button id='order'>Place Order</button>
               <hr>
           </div>
           <div id="order-items">
