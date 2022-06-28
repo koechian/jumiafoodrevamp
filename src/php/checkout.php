@@ -1,66 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/fonts.css" />
-    <link rel="stylesheet" href="css/landing.css" />
-    <link rel="stylesheet" href="css/checkout.css" />
-    <link rel="stylesheet" href="css/cart.css" />
-    <title>Checkout | Jumia Food</title>
-  </head>
-  <body>
-    <header>
-      <div class="cart-dropdown">
-        <div id="cart-header">
-          <div id="close-cart"></div>
-        </div>
-        <div id="cart-body">
-          <div class="cart-item">
-            <div id="cart-item-left">
-              <div>
-                <span>Wings Lunchbox</span>
-              </div>
-              <div>
-                <span>Quantity</span>
-                <div>
-                <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                <input value="1" type="number">
-                <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-              </div>
-              <div>
-                <span>Price</span>
-                <div>
-                <span>Ksh 367</span>
-              </div>
-              </div>
-            </div>
-            <div id="cart-item-right"></div>
-          </div>
-        </div>
-        <div id="cart-footer"></div>
-
-      </div>
-      <div id="left-elements">
-          <img class="logo" src="../assets/jumiafood-logo.svg" />
-        <div title="Update my Location" class="location">
-          <img class="icon" src="../assets/maps-and-flags.svg" alt="" />
-          <span id="mylocation">Strathmore University - Nairobi</span>
-        </div>
-      </div>
-      <div id="searchbar">
-        <input class="top-search" type="search" placeholder="Search"></input>
-        <button type="submit">Search</button>
-      </div>
-      <div id="right-elements">
-        <div>
-          <a href="php/profile-edit.php">Profile</a>
-          <a href="">My Orders</a>
-          <a href="">Past Orders</a>
-        </div>
-      </div>
-    </header>
+<?php
+include("config.php");
+include("../components/head.php");
+include('../components/header.php');
+?>
 <main>
       <section class="details">
           <div id="personal-information">
@@ -137,10 +79,10 @@
                   <h3>Total:</h3>
               </div>
               <div>
-                  <span>Ksh 1523</span><br>
+                  <span id="subtotal">Ksh &nbsp;</span><br>
                   <span>Ksh 70</span><br>
-                  <span>Ksh 243</span><br>
-                  <h3>Ksh 1836</h3>
+                  <span id="vat">Ksh &nbsp;</span><br>
+                  <h3 id="total">Ksh &nbsp;</h3>
               </div>
           </div>
           <div id="buttons">
@@ -148,181 +90,10 @@
               <hr>
           </div>
           <div id="order-items">
-            <div class="cart-item">
-              <div id="cart-item-left">
-                <div>
-                  <span id="item-heading">Wings Lunchbox</span>
-                  <br><br><br>
-                  <span>Price</span><br><br>
-                  <span>Quantity</span>
-                </div>
-                <div>
-                  <div>
-                    <div><span>Ksh 327</span></div>
-                    <div>
-                    <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                    <input value="1" type="number">
-                    <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-                  </div>
-                </div>
-              </div>
-              <div id="cart-item-right">
-                <div>
-                  <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-                </div>
-                <div>
-                  <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-                  <span>Remove</span>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div id="cart-item-left">
-                <div>
-                  <span id="item-heading">Wings Lunchbox</span>
-                  <br><br><br>
-                  <span>Price</span><br><br>
-                  <span>Quantity</span>
-                </div>
-                <div>
-                  <div>
-                    <div><span>Ksh 327</span></div>
-                    <div>
-                    <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                    <input value="1" type="number">
-                    <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-                  </div>
-                </div>
-              </div>
-              <div id="cart-item-right">
-                <div>
-                  <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-                </div>
-                <div>
-                  <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-                  <span>Remove</span>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div id="cart-item-left">
-                <div>
-                  <span id="item-heading">Wings Lunchbox</span>
-                  <br><br><br>
-                  <span>Price</span><br><br>
-                  <span>Quantity</span>
-                </div>
-                <div>
-                  <div>
-                    <div><span>Ksh 327</span></div>
-                    <div>
-                    <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                    <input value="1" type="number">
-                    <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-                  </div>
-                </div>
-              </div>
-              <div id="cart-item-right">
-                <div>
-                  <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-                </div>
-                <div>
-                  <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-                  <span>Remove</span>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div id="cart-item-left">
-                <div>
-                  <span id="item-heading">Wings Lunchbox</span>
-                  <br><br><br>
-                  <span>Price</span><br><br>
-                  <span>Quantity</span>
-                </div>
-                <div>
-                  <div>
-                    <div><span>Ksh 327</span></div>
-                    <div>
-                    <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                    <input value="1" type="number">
-                    <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-                  </div>
-                </div>
-              </div>
-              <div id="cart-item-right">
-                <div>
-                  <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-                </div>
-                <div>
-                  <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-                  <span>Remove</span>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div id="cart-item-left">
-                <div>
-                  <span id="item-heading">Wings Lunchbox</span>
-                  <br><br><br>
-                  <span>Price</span><br><br>
-                  <span>Quantity</span>
-                </div>
-                <div>
-                  <div>
-                    <div><span>Ksh 327</span></div>
-                    <div>
-                    <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                    <input value="1" type="number">
-                    <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-                  </div>
-                </div>
-              </div>
-              <div id="cart-item-right">
-                <div>
-                  <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-                </div>
-                <div>
-                  <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-                  <span>Remove</span>
-                </div>
-              </div>
-            </div>
-            <div class="cart-item">
-              <div id="cart-item-left">
-                <div>
-                  <span id="item-heading">Wings Lunchbox</span>
-                  <br><br><br>
-                  <span>Price</span><br><br>
-                  <span>Quantity</span>
-                </div>
-                <div>
-                  <div>
-                    <div><span>Ksh 327</span></div>
-                    <div>
-                    <button onclick="$(this).next()[0].stepDown()" ><span class="iconify" data-icon="icon-park-solid:reduce-one" style="color: #f90;" data-width="16" data-height="16"></span></button>
-                    <input value="1" type="number">
-                    <button onclick="$(this).prev()[0].stepUp()" ><span class="iconify" data-icon="fluent:add-circle-16-filled" style="color: #f90;" data-width="20" data-height="20"></span></button></div>
-                  </div>
-                </div>
-              </div>
-              <div id="cart-item-right">
-                <div>
-                  <img class="cart-img" src="../assets/wings-lunchbox-removebg-preview.png" alt="">
-                </div>
-                <div>
-                  <button class="remove-button" id="remove-button"><span class="iconify" data-icon="bi:trash" style="color: rgb(99, 48, 26);" data-width="20" data-height="20"></span></button>
-                  <span>Remove</span>
-                </div>
-              </div>
-            </div>
           </div>
       </section>
     </main>
   </body>
-  <script src="js/locator.js"></script>
-  <script src="https://code.iconify.design/2/2.2.1/iconify.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script src="js/index.js"></script>
+  <?php include('../components/scripts.php'); ?>
 
 </html>

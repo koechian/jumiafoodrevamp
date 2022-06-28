@@ -5,7 +5,7 @@
       <div id="cart-body">
       </div>
       <div id="cart-footer">
-        <button id="cart-checkout" onclick="window.location.replace('checkout.html')">Checkout</button>
+        <button id="cart-checkout" onclick="window.location.replace('../php/checkout.php')">Checkout</button>
       </div>
 
     </div>
