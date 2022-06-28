@@ -158,6 +158,3 @@ h2 {
 #order-items::-webkit-scrollbar-thumb:hover {
   background-color: #ff9900;
 }
-#cart {
-  display: none !important;
-}

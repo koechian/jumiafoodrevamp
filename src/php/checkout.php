@@ -3,6 +3,12 @@ include("config.php");
 include("../components/head.php");
 include('../components/header.php');
 ?>
+
+<style>
+#cart {
+  display: none !important;
+}
+  </style>
 <main>
       <section class="details">
           <div id="personal-information">
