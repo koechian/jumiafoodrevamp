@@ -42,6 +42,7 @@ h1 {
 }
 .checkout-input,
 select {
+  text-align: left;
   min-width: 300px !important;
   margin-top: 10px;
   margin-bottom: 10px;

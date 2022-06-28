@@ -20,15 +20,15 @@ include('../components/header.php');
             <div id="personal-info-form">
               <div>
                 <label for="">First Name</label><br>
-                <input class='checkout-input' type="text" name="first_name" id="first_name"><br>
+                <input class='checkout-input' type="text" name="first_name" id="first_name" placeholder=<?php echo $userdata[0]['firstname']?>><br>
                 <label for="">Last Name</label><br>
-                <input class='checkout-input' type="text" name="last_name" id="last_name"><br>
+                <input placeholder=<?php echo $userdata[0]['lastname']?> class='checkout-input' type="text" name="last_name" id="last_name"><br>
               </div>
               <div>
                 <label for="">Phone Number</label><br>
-                <input class='checkout-input' type="tel" name="phone_number" id="phone_number"> <br>
+                <input placeholder=<?php echo $userdata[0]['phone']?> class='checkout-input' type="tel" name="phone_number" id="phone_number"> <br>
                 <label for="">Email</label><br>
-                <input class='checkout-input' type="email" name="email" id="email">
+                <input placeholder=<?php echo $userdata[0]['email']?> class='checkout-input' type="email" name="email" id="email">
               </div>
             </div>
           </div>

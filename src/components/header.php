@@ -13,7 +13,7 @@
     </div>
     <div id="right-elements">
       <div>
-        <a href="php/profile-edit.php">Profile</a>
+        <a href="../php/profile-edit.php"><?php echo $userdata[0]['firstname']?></a>
         <a href="">My Orders</a>
         <a href="">Past Orders</a>
       </div>

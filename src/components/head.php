@@ -17,6 +17,13 @@
 <?php 
 session_start();
 $user=$_SESSION['user'];
+
+$sql="SELECT * FROM users WHERE id = $user";
+$data=mysqli_query($conn,$sql);
+$userdata=array();
+while($row=mysqli_fetch_assoc($data)){
+    $userdata[]=$row;
+}
 ?>
     <input type="hidden" id="user-id" name="user" value="<?php echo $user?>">
 
