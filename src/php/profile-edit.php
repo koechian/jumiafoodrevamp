@@ -11,7 +11,19 @@ $res = mysqli_query($conn, $sql);
 $result = mysqli_fetch_assoc($res);
 
 if (isset($_POST['Edit'])) {
-    "UPDATE users SET firstname =['?'] WHERE id='$user'";
+  $firstname = $_POST['firstname'];
+  $lastname = $_POST['lastname'];
+  $sql = "UPDATE users SET firstname = '$firstname' , lastname = '$lastname' WHERE id='$user'";
+
+  
+  $insertion = mysqli_query($conn, $sql);
+
+
+  if ($insertion) {
+    header("Location: ../php/profile-edit.php");
+  } else {
+    echo mysqli_error($conn);
+  }
 }
 
 
@@ -61,9 +73,9 @@ if (isset($_POST['logout'])) {
     <h2>Change your Account Details</h2>
     <form method = "POST">
         <label id="firstname" for="fname"> First name: </label>
-        <input type="text" id="firstname" name="firstname" value="<?php echo $result['firstname']; ?>">
+        <input type="text" id="firstname" name="firstname" placeholder="<?php echo $result["firstname"]; ?>">
         <label id="lastname" for="lname" class="lname"> Last name: </label>
-        <input type="text" id="lastname" name="lastname" value="<?php echo $result["lastname"]; ?>"><br>
+        <input type="text" id="lastname" name="lastname" placeholder="<?php echo $result["lastname"]; ?>"><br>
         <label id="emailaddress" for="email" class="email">Email: </label>
         <input type="email" id="email" name="email" value="<?php echo $result["email"]; ?>" readonly><br><br>
         <div id=accept-conditions>
