@@ -124,9 +124,9 @@ function populateCheckout(data) {
       price = parseInt(value.product_price) + price;
     })
   );
-  $("#subtotal").append(price);
-  $("#vat").append(price * 0.16);
-  $("#total").append(price + 70 + price * 0.16);
+  $("#subtotal").html(price);
+  $("#vat").html(price * 0.16);
+  $("#total").html(price + 70 + price * 0.16);
 }
 
 function remove(id) {

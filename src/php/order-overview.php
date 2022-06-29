@@ -46,7 +46,6 @@ include('../components/header.php');
                 $sql='SELECT * FROM resturants WHERE NOT food_served="chicken"';
                 $result=mysqli_query($conn,$sql);
             while($res=mysqli_fetch_assoc($result)){
-             
                 echo "<form action='resturant.php' method='GET'>
                 <div class='card'>
                  <img src=".$res['image']."><br>
@@ -57,7 +56,6 @@ include('../components/header.php');
               </form>";
               $count+=1;
               }
-            
               ?>
           </div>
         </div>

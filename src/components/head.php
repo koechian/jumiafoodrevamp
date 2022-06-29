@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="../css/resturant.css" />
     <link rel="stylesheet" href="../css/iziToast.min.css" />
     <link rel="stylesheet" href="../css/checkout.css" />
+    <link rel="stylesheet" href="../css/profile-edit.css" />
 </head>
 <?php 
 session_start();
@@ -29,3 +30,4 @@ while($row=mysqli_fetch_assoc($data)){
     <input type="hidden" id="user-id" name="user" value="<?php echo $user?>">
 
 <body>
+    

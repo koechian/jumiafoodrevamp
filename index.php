@@ -79,13 +79,9 @@ if (isset($_POST['register-submit'])) {
               <input id="password" name="password" required type="password" />
             </div>
             <button class="button" type="submit" name="login-submit" id="login_submit">Sign In</button>
-
           </div>
         </form>
-        <div class="hr-break">
-          <hr />
-          <span>or</span>
-        </div>
+       
       </div>
       <div class="register">
         <div class="title">
@@ -105,6 +101,10 @@ if (isset($_POST['register-submit'])) {
               <input type="text" id="lastname" name="lastname" />
             </div>
             <div>
+              <label for="phone">Phone Number</label>
+              <input type="text" id="phone" name="phone" placeholder='+254..' />
+            </div>
+            <div>
               <label for="email">Email</label>
               <input type="email" id="new-email" name="new-email" />
             </div>
@@ -121,25 +121,6 @@ if (isset($_POST['register-submit'])) {
             <input type="submit" class="button" id="register-submit" name="register-submit" value="Done">
           </div>
         </form>
-        <div class="hr-break">
-          <hr />
-          <span>or</span>
-        </div>
-      </div>
-      <div class="sign-in-options">
-        <div class="sign-in-options-buttons google">
-          <img class="login-icons" src="assets/google.svg" alt="" />
-          <span>Continue with Google</span>
-        </div>
-        <div class="sign-in-options-buttons facebook">
-          <img class="login-icons" src="assets/facebook.svg" alt="" />
-          <span>Continue with Facebook</span>
-        </div>
-        <div class="sign-in-options-buttons apple">
-          <img class="login-icons" src="assets/apple.svg" alt="" />
-
-          <span>Continue with Apple</span>
-        </div>
       </div>
     </div>
   </section>

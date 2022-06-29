@@ -22,11 +22,11 @@ include('../components/header.php');
             </div>
             <div id="cards-row-buttons">
               <span class="span-button" onclick="window.location.href='order-overview.php'">Explore Resturants</span>
-              <span class="span-button">Same as last time</span>
+              <span onclick="window.location.href='history.php'" class="span-button">Same as last time</span>
             </div>
           </div>
           <div id="cards-row-cards" >
-            <div class="cards" onclick="window.location.href='order-overveiw.php'">
+            <div class="cards" onclick="window.location.href='order-overview.php'">
               <div class="filter"></div>
               <div class="cards-content"><span>Explore breakfasts from Wangu's kitchen</span><br><br>
                 <span class="cards-content-button span-button">order now</span>

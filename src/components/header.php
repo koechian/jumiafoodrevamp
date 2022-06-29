@@ -1,7 +1,7 @@
 <header>
     <?php include('cart.php'); ?>
     <div id="left-elements">
-        <img class="logo" src="../../assets/jumiafood-logo.svg" />
+        <img onclick="window.location.replace('landing.php')" class="logo" src="../../assets/jumiafood-logo.svg" />
       <div title="Update my Location" class="location">
         <img class="icon" src="../../assets/maps-and-flags.svg" alt="" />
         <span id="mylocation">Strathmore University - Nairobi</span>
