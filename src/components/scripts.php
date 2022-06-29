@@ -4,4 +4,5 @@
   <script src="../js/index.js"></script>
   <script src="../js/pages-handler.js"></script>
   <script src="../js/iziToast.min.js"></script>
+  <script src="../js/bootstrap.min.js"></script>
 
