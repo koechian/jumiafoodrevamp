@@ -20,7 +20,7 @@ if (isset($_POST['Edit'])) {
 
 
   if ($insertion) {
-    header("Location: ../php/profile-edit.php");
+    header("Location: .. /php/profile-edit.php");
   } else {
     echo mysqli_error($conn);
   }
@@ -69,6 +69,7 @@ if (isset($_POST['logout'])) {
                 <img class="cart-icon icon" src="../../assets/shopping-cart.svg" alt="" srcset="" />
             </div>
         </div>
+        
     </header>
     <h2>Change your Account Details</h2>
     <form method = "POST">
