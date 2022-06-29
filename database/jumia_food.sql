@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: Jun 27, 2022 at 03:17 PM
+-- Generation Time: Jun 29, 2022 at 12:15 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 7.4.29
 
@@ -31,15 +31,6 @@ CREATE TABLE `cart` (
   `item_id` int(11) NOT NULL,
   `id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `cart`
---
-
-INSERT INTO `cart` (`item_id`, `id`) VALUES
-(17, 2),
-(18, 2),
-(20, 2);
 
 -- --------------------------------------------------------
 
@@ -116,6 +107,33 @@ INSERT INTO `menu` (`id`, `product_name`, `product_price`, `product_image`, `des
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `orders`
+--
+
+CREATE TABLE `orders` (
+  `table_key` int(11) NOT NULL,
+  `item_id` int(11) NOT NULL,
+  `id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `orders`
+--
+
+INSERT INTO `orders` (`table_key`, `item_id`, `id`) VALUES
+(4, 16, 2),
+(5, 18, 2),
+(6, 20, 2),
+(7, 17, 2),
+(8, 18, 2),
+(9, 28, 2),
+(10, 31, 2),
+(11, 2, 2),
+(12, 47, 3);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `resturants`
 --
 
@@ -135,7 +153,6 @@ CREATE TABLE `resturants` (
 --
 
 INSERT INTO `resturants` (`id`, `name`, `image`, `cover_image`, `tags`, `food_served`, `delivery_time`, `delivery_fee`) VALUES
-(1, 'Cinammon Indian Resturant ', '../../assets/cinammon-resturant.jpg', '../assets/cinammon-indian-cover.jpg', 'Indian • Cheap', 'indian', 0, 0),
 (2, 'ABC Place', '../../assets/healthy-abc.jpg', '../../assets/abc-place-cover.jpg', 'Vegeterian • Fair', 'vegeterian', 20, 120),
 (3, 'Pizza Inn', '../../assets/pizza-inn-image.jpg', '../../assets/pizza-inn-cover.jpg', 'Pizza • Cheap', 'pizza', 20, 80),
 (4, 'Local Delights', '../../assets/swahili.jpg', '../../assets/swahili-cover.jpg', 'Traditional Foods • Value for Money', 'kenyan', 100, 60),
@@ -154,6 +171,7 @@ CREATE TABLE `users` (
   `id` int(10) NOT NULL,
   `firstname` varchar(40) NOT NULL,
   `lastname` varchar(40) NOT NULL,
+  `phone` varchar(100) NOT NULL,
   `email` varchar(40) NOT NULL,
   `password` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -162,9 +180,10 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `firstname`, `lastname`, `email`, `password`) VALUES
-(1, 'Sean', 'Kinuthia', 'sean@gmail.com', 'sean'),
-(2, 'Test', 'Tester', 'test@gmail.com', 'test');
+INSERT INTO `users` (`id`, `firstname`, `lastname`, `phone`, `email`, `password`) VALUES
+(1, 'Sean', 'Kinuthia', '0', 'sean@gmail.com', 'sean'),
+(2, 'Test', 'Tester', '+254700251966', 'test@gmail.com', 'test'),
+(3, 'Ian', 'Koech', '+254799038737', 'ian@gmail.com', 'ian');
 
 --
 -- Indexes for dumped tables
@@ -183,6 +202,13 @@ ALTER TABLE `cart`
 ALTER TABLE `menu`
   ADD PRIMARY KEY (`id`),
   ADD KEY `resturant_id` (`resturant_id`);
+
+--
+-- Indexes for table `orders`
+--
+ALTER TABLE `orders`
+  ADD PRIMARY KEY (`table_key`),
+  ADD KEY `item-id` (`item_id`);
 
 --
 -- Indexes for table `resturants`
@@ -204,13 +230,19 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `cart`
 --
 ALTER TABLE `cart`
-  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `item_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=49;
 
 --
 -- AUTO_INCREMENT for table `menu`
 --
 ALTER TABLE `menu`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=52;
+
+--
+-- AUTO_INCREMENT for table `orders`
+--
+ALTER TABLE `orders`
+  MODIFY `table_key` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `resturants`
@@ -222,7 +254,7 @@ ALTER TABLE `resturants`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables
@@ -240,6 +272,12 @@ ALTER TABLE `cart`
 --
 ALTER TABLE `menu`
   ADD CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`resturant_id`) REFERENCES `resturants` (`id`);
+
+--
+-- Constraints for table `orders`
+--
+ALTER TABLE `orders`
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`item_id`) REFERENCES `menu` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
