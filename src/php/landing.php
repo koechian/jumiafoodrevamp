@@ -33,7 +33,7 @@ include('../components/header.php');
               </div>
             </div>
             <div class="cards">
-              <div class="filter" onclick="window.location.href='order-overveiw.php'"></div>
+              <div class="filter" onclick="window.location.href='order-overview.php'"></div>
               <div class="cards-content"><span>Healthy Treats from ABC Place</span><br><br>
               <span class="cards-content-button span-button">order now</span></div>
             </div>
