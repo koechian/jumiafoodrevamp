@@ -21,7 +21,7 @@ if (isset($_POST['Edit'])) {
 
 
   if ($insertion) {
-    header("Location: .. /php/profile-edit.php");
+    header("Location: ../php/profile-edit.php");
   } else {
     echo mysqli_error($conn);
   }
@@ -35,41 +35,9 @@ if (isset($_POST['logout'])) {
 }
 
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jumia Food | Home</title>
-    <link rel="stylesheet" href="../css/fonts.css" />
-    <link rel="stylesheet" href="../css/landing.css" />
-    <link rel="stylesheet" href="../css/profile-edit.css" />
-</head>
 
-<body>
-    <header>
-        <div id="left-elements">
-            <img class="logo" src="../../assets/jumiafood-logo.svg" />
-            <div title="Update my Location" class="location">
-                <img class="icon" src="../../assets/maps-and-flags.svg" alt="" />
-                <span id="mylocation">Strathmore University - Nairobi</span>
-            </div>
-        </div>
-        <div id="searchbar">
-            <input class="top-search" type="search" placeholder="Search"></input>
-            <button type="submit">Search</button>
-        </div>
-        <div id="right-elements">
-            <div>
-                <a href="">My Orders</a>
-                <a href="">Past Orders</a>
-            </div>
-            <div id="cart">
-                <img class="cart-icon icon" src="../../assets/shopping-cart.svg" alt="" srcset="" />
-            </div>
-        </div>
-        
-    </header>
 ?>
+
     <h2>Change your Account Details</h2>
     <form method = "POST">
         <label id="firstname" for="fname"> First name: </label>
@@ -89,5 +57,144 @@ if (isset($_POST['logout'])) {
 
     </form>
 </body>
+<style>
+    #cart{
+        display:none !important;
+    }
+    .left-elements {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  margin-left: -100px;
+}
+#left-elements div {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+  transition: ease-in-out 0.2s;
+}
+#left-elements div:hover {
+  cursor: pointer;
+  transform: scale(1.01);
+}
+#left-elements div .icon {
+  color: #ffb240 !important;
+}
+
+form {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+}
+input {
+  min-width: 70% !important;
+  padding: 10px 20px;
+  margin: 8px 0;
+  border: 2px solid orangered;
+  border-radius: 4px;
+}
+button {
+  background-color: orangered;
+  border: none;
+  border-radius: 15px;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  font-size: 20px;
+  display: inline-block;
+  size: 30px;
+  display: inline-flex;
+}
+h2 {
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+}
+#fname,
+#lname,
+#email {
+  display: inline-block;
+  width: 500px;
+  text-align: left;
+  font-size: 25px;
+  writing-mode: horizontal-tb;
+  font-weight: bold;
+}
+#firstname,
+#lastname,
+#emailaddress {
+  display: inline-block;
+  width: 150px;
+  text-align: left;
+  font-size: 25px;
+  writing-mode: horizontal-tb;
+  font-weight: bold;
+}
+.container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 25px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+.container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+.container input:checked ~ .checkmark {
+  background-color: #2196f3;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.container .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+.label div accept-conditions {
+  width: 300px;
+}
+
+</style>
 <?php include('../components/scripts.php'); ?>
 </html>
