@@ -3,7 +3,7 @@ session_start();
 include("src/php/config.php");
 
 if (isset($_POST['login-submit'])) {
-  header("location: /src/php/landing.php");
+  header("location: src/php/landing.php");
   // $email = $_POST['email'];
   // $password = $_POST['password'];
 
@@ -127,6 +127,6 @@ if (isset($_POST['register-submit'])) {
   <section class="image"></section>
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<script src="src/js/index.js"></script>
+<script src="/src/js/index.js"></script>
 
 </html>
