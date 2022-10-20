@@ -3,6 +3,7 @@ session_start();
 include("src/php/config.php");
 
 if (isset($_POST['login-submit'])) {
+  
   $email = $_POST['email'];
   $password = $_POST['password'];
   

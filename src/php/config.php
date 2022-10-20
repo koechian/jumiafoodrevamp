@@ -1,6 +1,6 @@
 <?php
-$hostname = "localhost";
-$username = "guest";
-$password = "*A9D467528C52CF9DD63A2168DBE51A8241160241";
-$database = "jumia_food";
+$hostname = "sq11.freemysqlhosting.net";
+$username = "sql11528063";
+$password = "ltsfyi2dfG";
+$database = "sql11528063";
 $conn = new mysqli($hostname, $username, $password, $database) or die("Unable to connect to '$database'");
