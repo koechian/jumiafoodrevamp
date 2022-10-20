@@ -1,5 +1,5 @@
 <?php
-$hostname = "127.0.0.1";
+$hostname = "localhost";
 $username = "guest";
 $password = "database";
 $database = "jumia_food";
