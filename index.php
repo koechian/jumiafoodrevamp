@@ -3,22 +3,22 @@ session_start();
 include("src/php/config.php");
 
 if (isset($_POST['login-submit'])) {
-  $email = $_POST['email'];
-  $password = $_POST['password'];
+  header("location: src/php/landing.php");
+  // $email = $_POST['email'];
+  // $password = $_POST['password'];
 
-  $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
+  // $query = "SELECT * FROM users WHERE email='$email' AND password='$password'";
 
 
-  $res = mysqli_query($conn, $query);
-  $result = mysqli_fetch_assoc($res);
-  $count = mysqli_num_rows($res);
+  // $res = mysqli_query($conn, $query);
+  // $result = mysqli_fetch_assoc($res);
+  // $count = mysqli_num_rows($res);
 
-  if ($count == 1) {
-    $_SESSION["user"] = $result['id'];
-    header("location: src/php/landing.php");
-  } else {
-    $error = "Your Login Name or Password is invalid";
-  }
+  // if ($count == 1) {
+  //   $_SESSION["user"] = $result['id'];
+  // } else {
+  //   $error = "Your Login Name or Password is invalid";
+  // }
 }
 
 
