@@ -3,7 +3,7 @@ session_start();
 include("src/php/config.php");
 
 if (isset($_POST['login-submit'])) {
-  header("location: src/php/landing.php");
+  header("location: /src/php/landing.php");
   // $email = $_POST['email'];
   // $password = $_POST['password'];
 
